@@ -43,9 +43,11 @@ void InputStudent(struct Student *s){
 
 void InputAllStudent(Student *s, int n){
     cin>>n;
+    cout<<"write the student info"<<endl;
     for(int i = 0; i < n; i++){
-        InputStudent(*&student);
-        arr = new Student[n];
+        InputStudent(s);
+        s = new Student[n];
+        cout<<"first etiration"<<endl;
     }
 }
 
