@@ -4,6 +4,8 @@ using namespace std;
 
 
 const int MAX_NAME = 14 ;  //Assume Name Contains at most 14 Chars
+int n;                          //number of students
+
 
 struct Gender{
     bool male;              // 0 for male, 1 for female
@@ -23,7 +25,9 @@ struct Student{
     Date birth_date;
     Gender gender;
     double GPA;
-}; Student *s;
+}; Student *student;
+
+struct Student *arr ;
 
 void InputStudent(struct Student *s){
     scanf("%i", &s->ID);
@@ -37,9 +41,17 @@ void InputStudent(struct Student *s){
     scanf("%a", &s->GPA);
 }
 
+void InputAllStudent(Student *s, int n){
+    cin>>n;
+    for(int i = 0; i < n; i++){
+        InputStudent(*&student);
+        arr = new Student[n];
+    }
+}
+
 int main(){
     Student student;
-    InputStudent(&student);
+    InputAllStudent(&student, n);
     return 0;
 }
 
